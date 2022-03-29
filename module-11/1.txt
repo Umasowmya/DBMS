@@ -1,0 +1,23 @@
+Insertion anamoly:
+
+Insertion of a row which only contains a new PatNo and PatCity cannot
+ be possible because visitNo and ProvNo are primary keys and cannot
+ be remain as Null values
+
+
+Updation anamoly:
+
+Updation of a  PatNo  leads to updation of all the other rows  inorder 
+to not violate the functional dependency. 
+
+ 		PatNo --> PatAge 
+
+Any updations leads to violating this functional dependency.
+
+
+Deletion anamoly:
+
+Deletion of  a row of  VisitNo V82110 leads to loss of Functional
+ dependencies it contains.
+		PatAge --> PatCity
+	

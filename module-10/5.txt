@@ -1,0 +1,5 @@
+Table :  Account
+Primary Key : ActId
+Foreign Key : AcctType
+Columns: [ AcctId, AcctType, AcctName, Balance]
+FOREIGN EY (AcctType) REFERENCES Account 

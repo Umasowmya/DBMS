@@ -1,0 +1,14 @@
+Table: Owner
+Primary key: OwnId
+Columns: [ OwnId,OwnName,OwnPhone]
+
+Table: Shares
+Primary Key: OwnId,PropId
+Columns : [ Startweek,EndWeek,OwnId,OwnName,OwnPhone]
+FOREIGN KEY(OwnId) REFERENCES Owner
+FOREIGN KEY(PropId) REFERENCES Property
+
+
+Table:Property
+Primary key:PropId
+Columns:[PropId,BlgName,UnitNo,Bdrms]

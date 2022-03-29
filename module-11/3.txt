@@ -1,0 +1,26 @@
+Table : Student
+Columns : [StdNo,StdName,StdEMail,StdAddress,StdCity,StdState,StdZip]
+
+The StdNo and StdEmail are both unique thus  can be determinants
+
+Student(StdNo, StdName, StdEmail, StdAddress, StdCity, StdState, StdZip )
+UNIQUE(StdEmail)
+
+Table : Lender
+Columns : [LenderNo, LenderName]
+
+The LenderNo and LenderName are both unique thus  can be determinants
+
+Lender (LenderNo, LenderName)
+UNIQUE(LenderName)
+
+
+Table : Institution
+Columns : [InstNo, InstName, InstMascot]
+The  IntNo  and   InstName  are both unique thus  can be determinants
+
+
+Institution (InstNo, InstName, InstMascot)
+UNIQUE(InstName)
+
+

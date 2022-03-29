@@ -1,0 +1,16 @@
+Functional Dependencies 
+
+1. OrdNo --> itemNo         False F.D               [{O1,I1} {O1,I2}]
+
+2. OrdNo --> QtyOrd        False F.D               [{O2,5} {O2,10}]
+
+3. OrdNo --> CustNo        True F.D               [{O1,C1,}{O2,C2} {O3,C1}]
+
+4. OrdNo --> CustBal        True F.D               [{O1,100,}{O2,200} {O3,100}]
+
+5. OrdNo --> CustDisc       True F.D               [{O1,0.10,}{O2,0.05} {O3,0.10}]
+
+6. OrdNo --> ItemPrice      False F.D               [{O1,10} {O1,20}]
+
+7. OrdNo --> OrdDate        True F.D   	   [{O1,1/15/2018,},{O2,1/16/2018} ,{O3,1/17/2018}]
+

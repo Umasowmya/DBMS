@@ -1,0 +1,47 @@
+Step-1:
+
+PatNo  --> PatAge,PatZip9
+PatZip9 --> PatCity
+VisitNo --> VisitDate,PatNo
+ProvNo --> ProvSpeciality,ProvEmail
+VisitNo,ProvNo --> Diagnosis
+ProvEmail --> ProvNo
+
+Step-2:
+
+CREATE TABLE  Pat ( PatNo,PatAge,PatZip9) 
+	FOREIGN KEY  PatZip9  REFERENCES PatZ
+
+CREATE TABLE  PatZ(PatZip9,PatCity) 
+	
+CREATE TABLE  Visit(VisitNo,VisitDate,PatNo)
+	FOREIGN KEY PatNo REGERENCES  Pat
+
+CREATE TABLE  Prov(ProvNo, ProvSpeciality,ProvEmail)
+	FOREIGN KEY  ProvEmail  REGERENCES  PROVEM
+
+CREATE TABLE  Visit_Prov(VisitNo,ProvNo, Diagnosis)
+	FOREIGN KEY ProvNo REGERENCES  Prov
+	FOREIGN KEY  VisitNo  REGERENCES  Visit
+
+CREATE TABLE  Provem(ProvEmail ,ProvNo)
+	FOREIGN KEY  ProvNo  REGERENCES  Prov
+
+
+Step-3:
+Merge
+
+CREATE TABLE  Pat ( PatNo,PatAge,PatZip9) 
+	FOREIGN KEY  PatZip9  REFERENCES PatZ
+
+CREATE TABLE  PatZ(PatZip9,PatCity) 
+	
+CREATE TABLE  Visit(VisitNo,VisitDate,PatNo)
+	FOREIGN KEY PatNo REGERENCES  Pat
+
+CREATE TABLE  Prov(ProvNo, ProvSpeciality,ProvEmail)
+	UNIQUE (ProvEmail)
+
+CREATE TABLE  Visit_Prov(VisitNo,ProvNo, Diagnosis)
+	FOREIGN KEY ProvNo REGERENCES  Prov
+	FOREIGN KEY  VisitNo  REGERENCES  Visit

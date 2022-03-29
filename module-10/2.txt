@@ -1,0 +1,14 @@
+1-M rule applications:
+
+Table: Loan 
+Foreign key: [ StdNo, InstID, LenderNo]
+FOREIGN KEY (StdNo) REFERENCES Student
+FOREIGN KEY (InstID) REFERENCES  Institution
+FOREIGN KEY (LenderNo) REFERENCES  Lender
+Std NOT NULL
+InstID  NOT NULL
+LenderNo NOT NULL
+
+
+
+

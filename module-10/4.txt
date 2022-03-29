@@ -1,0 +1,4 @@
+CREATE TABLE Disburse Line (DateSent , Amount,OrigFree,GuarFree,
+	LoanNo)
+FOREIGN KEY (LoanNo) REFERENCES Loan
+LoanNo NOT NULL

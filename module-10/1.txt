@@ -1,0 +1,16 @@
+Table : Student
+Primary key :  StdNo
+Columns: [ StdNo, StdName, StdAddress, StdCity, StdState, StdZip,StdEmail]
+
+Table : Institution
+Primary key : InstID
+Columns : [ InstlID, InstName,InstMascOT]
+
+Table:Loan
+Primary key: LoanNo
+Columns: [ LoanNo,ProcDate, DisbMethod , DisbBank,DateAuth,NoteValue,Subsidized, Rate,StdNo,InstID,LenderNo]
+
+
+Table: Lender
+Primary key: LenderNo
+Columns: [  LenderNo,LendName]

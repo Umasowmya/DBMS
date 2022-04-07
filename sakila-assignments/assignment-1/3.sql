@@ -1,3 +1,7 @@
+/*3. Find out the list of customers from India who have rented sports movies.
+*/
+
+
 select customer.first_name,customer.last_name  from customer,address,film,film_category,category,city,country  where customer.address_id=address.address_id
  and address.city_id=city.city_id
  and city.country_id=country.country_id

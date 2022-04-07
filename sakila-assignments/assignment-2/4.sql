@@ -1,3 +1,7 @@
+/*4. Find out the top 3 rented category of movies by “PATRICIA JOHNSON”.
+*/
+
+
 select film_list.category ,count(*) from film_list,inventory,rental,customer
 where film_list.FID =  inventory.film_id
 and  inventory.inventory_id=rental.inventory_id

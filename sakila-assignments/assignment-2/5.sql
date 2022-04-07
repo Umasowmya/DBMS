@@ -1,3 +1,7 @@
+/*5. Find out the number of R rated movies rented by “SUSAN WILSON”.
+*/
+
+
 select count(*) as No_of_R_raetd_movies  from film,customer,inventory,rental
 where film.rating="R"
 and film.film_id=inventory.film_id

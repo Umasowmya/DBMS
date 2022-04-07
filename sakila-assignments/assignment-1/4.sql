@@ -1,3 +1,7 @@
+/*4. Find out the list of customers from Canada who have rented “NICK WAHLBERG” movies.
+*/
+
+
 select customer.first_name,customer.last_name from customer,city,country,actor,film,film_actor,address
 where customer.address_id=address.address_id 
 and address.city_id=city.city_id
